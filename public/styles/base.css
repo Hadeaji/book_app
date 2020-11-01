@@ -1,13 +1,86 @@
-html.body{
+html,body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+}
+header{
     background: #031321;
+    display: grid;
+    grid-template-columns:  repeat(6, auto) ;
+    width: 100%;
+    display: block;
+}
+main {
+    background: rgb(155, 155, 155);
+    display: grid;
+    grid-template-columns:  1fr ;
+    padding-bottom: 50px;
+    width: 100%;
+
 }
 
-h1 {
-    color: #2196f3;
+main div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    margin-top: 20px;
+
 }
+.dis{
+    width: 70%;
+    font-size: x-large;
+    color: rgb(61, 61, 61);
+}
+h1 {
+    color: #fff;
+    grid-column: 1 / 7;
+    height: 110px;
+    margin: 0 0 0 20px;
+    font-size: 40px;
+    line-height: 110px;
+}
+h2 {
+    color: #fff;
+    grid-column: 1 / 7;
+    background-color: rgb(87, 85, 85);
+    height: 90px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 90px;
+    margin: 0;
+    width: 100%;
+    display: block;
+}
+h3{
+    text-shadow: 3px 1px 0px darkgrey;
+    color: #fff;
+    font-size: x-large;
+}
+
+main div image {
+    grid-column: 3/5;
+    width: 200px;
+}
+
+.container{
+    padding-top: 50px;
+    margin-top: 50px;
+    grid-column: 1/2;
+    background-color: rgb(221, 215, 215);
+    width: 80%;
+    justify-self: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px grey;
+}
+

@@ -17,25 +17,15 @@ app.use('/public',express.static('public'));
 
 app.set('view engine', 'ejs');
 
-// app.get('/location', handelGettingPeopleData);
-// app.get('/weather', handelWeather);
-// app.get('/trails', handelTrails);
-// app.get('/movies', handelMovies);
-// app.get('/yelp',handelRust);
-// app.get('/*',handelError);
 
 
-
-app.get('/hello', hello);
-function hello(request,response){
-  response.render('pages/index.ejs');
+app.get('/', indexRender);
+function indexRender(req, res) {
+  res.render('pages/index');
 }
-
-
-
-app.get('/', formRender);
+app.get('/form', formRender);
 app.post('/searches', searchFunction);
-
+app.get('/*',handelError);
 
 
 function formRender(req, res) {
@@ -64,13 +54,16 @@ function Book(item) {
 function searchFunction(req, res) {
   let q = '';
   if (req.body.search[1] === 'title') { q = `+intitle:${req.body.search[0]}`; }
-  if (req.body.search[1] === 'auther') { q = `+inauthor:${req.body.search[0]}`; }
+  if (req.body.search[1] === 'author') { q = `+inauthor:${req.body.search[0]}`; }
 
   superagent.get(`https://www.googleapis.com/books/v1/volumes?q=${q}`)
     .then(apiResponse => apiResponse.body.items.map(bookResult => new Book(bookResult.volumeInfo)))
     .then(results => res.render('pages/searches/show', { searchResults: results }));
 }
 
+function handelError(req,res){
+  res.render('pages/error');
+}
 
 app.listen(PORT, () => {
   console.log(`The App Port is ${PORT}`);
