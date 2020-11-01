@@ -3,8 +3,7 @@
 const express = require('express');
 const cors = require('cors');
 const superAgent = require('superagent');
-const { request } = require('http');
-const { response } = require('express');
+
 
 require('dotenv').config();
 const app = express();
@@ -25,13 +24,18 @@ app.set('view engine', 'ejs');
 // app.get('/yelp',handelRust);
 // app.get('/*',handelError);
 
+
+
 app.get('/hello', hello);
-
-
 function hello(request,response){
-
   response.render('pages/index.ejs');
+}
 
+
+
+app.get('/', search);
+function search(request,response){
+  response.render('pages/searches/new.ejs');
 }
 
 
