@@ -1,0 +1,35 @@
+header img{
+    display: inline-flex;
+    padding: auto;
+    padding: 30px;
+    width: 5%;
+}
+h1{
+    display: inline-flex;
+}
+
+#nav{
+    width: 100%;
+    display: flex;
+    top: 110px;
+    position: fixed;
+    flex-direction: column;
+    opacity: 0.7;
+
+}
+#nav form,#nav button{
+    display: block;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    border-style: none;
+    
+}
+
+#count {
+    background-color: #fff;
+    color: gray;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 2px 10px;
+}
