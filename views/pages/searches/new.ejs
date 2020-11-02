@@ -8,20 +8,19 @@
 
   </head>
 <body>
-    <header>
-        <h1>Best Books!</h1>
-    </header>
-    <main style="height: 83vh; justify-content: center;">
+  <%- include( '../../layout/header' ) %>
+
+    <main style="height: 100vh; justify-content: center;">
       <h2>Search by Title or Auther</h2>
 
 
-            <form action="/searches" method="POST">
+            <form action="/searches" method="POST" id="searchForm">
                 <input type="text" name="search" placeholder="enter a title or auther" required>
                 <fieldset>
                     <label for="title"><span>Title</span> <input type="radio" name="search" value="title" required></input> </label>
                 </fieldset>
                 <fieldset>
-                    <label for="auther"><span>Auther</span> <input type="radio" name="search" value="auther" required></input> </label>
+                    <label for="authors"><span>Auther</span> <input type="radio" name="search" value="authors" required></input> </label>
                 </fieldset>
                 <button type="submit">Search the Google Books API</button>
             </form>
@@ -30,7 +29,8 @@
 
   </main>
 
-  
-    
+  <%- include( '../../layout/footer' ) %>
+
+  <script src="../../public/js/app.js"></script>
 </body>
 </html>

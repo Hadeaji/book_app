@@ -8,9 +8,16 @@
 
   </head>
   <body>
-    <%- include( '../layout/header' ) %>
-      <main style="height: 100vh; justify-content: center; text-align: center; align-content: center;">
-        <h1>Sorry.....an Error had occured </h1>
-      </main>
+    <%- include( '../../layout/header' ) %>
+
+      <main>
+        <h2>Search Results</h2>
+
+        <%- include( 'detail' ) %>
+
+    </main>
+    <%- include( '../../layout/footer' ) %>
+
+    <script src="../../public/js/app.js"></script>
   </body>
 </html>

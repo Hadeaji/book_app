@@ -5,17 +5,29 @@
     <link rel="stylesheet" href="/public/styles/base.css">
     <link rel="stylesheet" href="/public/styles/layout.css">
     <link rel="stylesheet" href="/public/styles/modules.css">
-
+​
   </head>
 <body>
-    <header>
-        <h2>Welcome to the Books library</h2>
-    </header>
-    <main style="height: 100vh;">
-        <form action="/form">
-            <button >Go to search page</button>
+      <%- include( '../layout/header' ) %>
+
+
+    <main style="height: 100%;grid-template-rows:auto;">
+      <h2><span id="count"><%=savedBook.rowCount%></span> Saved Books</h2>
+
+          <% savedBook.rows.forEach( book => { %>
+            <div class="container" >
+                  <img src="<%=book.image_url%>" alt="" style="width: 300px;border: 10px solid #fff;">
+                  <div class="dis">
+                      <h3><%= book.title %></h3>
+                      <h4><%=book.authors%></h4>
+                      <form action="/books/<%=book.id%>">
+                        <button >View Details</button>
+                      </form>
+                  </div>
+              </div>
+              <% }) %>
     </main>
-    
-</form>
+    <%- include( '../layout/footer' ) %>
+      <script src="../../public/js/app.js"></script>
 </body>
 </html>
