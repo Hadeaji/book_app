@@ -2,7 +2,6 @@ header img{
     display: inline-flex;
     padding: auto;
     padding: 30px;
-    width: 5%;
 }
 h1{
     display: inline-flex;
@@ -11,7 +10,7 @@ h1{
 #nav{
     width: 100%;
     display: flex;
-    top: 110px;
+    top: 60px;
     position: fixed;
     flex-direction: column;
     opacity: 0.7;
@@ -30,6 +29,111 @@ h1{
     background-color: #fff;
     color: gray;
     border-radius: 50%;
-    font-size: 30px;
-    padding: 2px 10px;
+    font-size: 15px;
+    padding: 2px 7px;
+    vertical-align: top;
+}
+
+#updateForm {
+    position: fixed;
+    flex-direction: row !important;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+.detailsbuttons{
+    width: 40%;
+    margin: 0;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#detailsbuttons>button{
+    font-size: 20px;
+    border-radius: 5px;
+    height: 12vh;
+    width: 40%;
+    height: 40px;
+    border-style: none;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(39, 39, 39);
+    
+}
+#detailsbuttons{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+#delete{
+    font-size: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    border-style: none;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(39, 39, 39);
+
+}
+
+.updatebuttons{
+    font-size: 20px;
+    margin: 20px 0 5px 0;
+    border-radius: 5px;
+    height: 40px;
+    width: 40%;
+    border-style: none;
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+}
+
+#updateform{
+    position: fixed;
+    flex-direction: row !important;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    background-color: gray;
+    margin: 20px auto;
+    justify-content: space-evenly;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+#updatearea{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.updateTextArea{
+    width: 90%;
+    height: 60px;
+    font-size: 15px;
+    background-color: #fff;
+    margin: 5px 0;
+    /* padding: 5px 5px; */
+    border-radius: 5px;
+    border-style: none;
+    text-decoration: none;
+    line-height: 60px;
 }
