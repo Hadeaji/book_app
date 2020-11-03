@@ -1,0 +1,13 @@
+<div id="updatearea" style="display: none;">
+    <form action="/books/<%=bookDetails[0].id %>?_method=PUT" method="POST" id="updateform" >
+        <input type="text" name="title" value="<%= bookDetails[0].title %>" placeholder="Populated Title" class="updateTextArea">
+        <input type="text" name="authors" value="<%=bookDetails[0].authors%>" placeholder="Populated Author" class="updateTextArea">
+        <input type="text" name="isbn" value="<%=bookDetails[0].isbn%>" placeholder="Populated ISBN" class="updateTextArea"> 
+        <input type="text" name="image" value="<%=bookDetails[0].image_url%>" placeholder="Populated Image URL" class="updateTextArea">
+        <input type="text" name="description" value="<%=bookDetails[0].description%>" placeholder="Populated Description" class="updateTextArea">
+        <input type="text" name="bookshelf" value="<%=bookDetails[0].bookshelf%>" placeholder="Populated Bookshelf" class="updateTextArea">
+        <button type="submit" class="updatebuttons">Update</button>
+        <button onclick="update(event)" class="updatebuttons">close</button>
+
+    </form>
+</div>
